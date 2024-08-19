@@ -1,6 +1,22 @@
+use std::io;
+
 fn main() {
 
-    practice_variable();
+    practice_input();
+}
+
+fn practice_input() {
+
+    println!("원하는 숫자를 입력해 주세요.");
+
+    let mut guess = String::new();
+    // mut 키워드는 값을 변경할수 있게 해줌.(입력이 가능하게)
+
+    io::stdin().read_line(&mut guess)// 표기에 유의! &guess가 아닌 &mut guess로 표현해야함.
+        .expect("입력 오류!!");
+
+    println!("당신이 입력한 값은 {}", guess);
+
 }
 
 
