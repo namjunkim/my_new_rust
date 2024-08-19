@@ -7,8 +7,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6cf393a-edde-493a-b54c-a56efbaaa40d" name="Changes" comment="변수 연습하기1">
+    <list default="true" id="f6cf393a-edde-493a-b54c-a56efbaaa40d" name="Changes" comment="함수 연습하기1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724072426776</updated>
-      <workItem from="1724072427872" duration="587000" />
+      <workItem from="1724072427872" duration="2825000" />
     </task>
     <task id="LOCAL-00001" summary="My first rust commit">
       <option name="closed" value="true" />
@@ -111,7 +113,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724072647652</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="함수 연습하기1">
+      <option name="closed" value="true" />
+      <created>1724073034418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724073034418</updated>
+    </task>
+    <task id="LOCAL-00004" summary="함수 연습하기1">
+      <option name="closed" value="true" />
+      <created>1724073958614</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724073958614</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +138,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="My first rust commit" />
     <MESSAGE value="변수 연습하기1" />
-    <option name="LAST_COMMIT_MESSAGE" value="변수 연습하기1" />
+    <MESSAGE value="함수 연습하기1" />
+    <option name="LAST_COMMIT_MESSAGE" value="함수 연습하기1" />
   </component>
 </project>

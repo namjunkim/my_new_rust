@@ -1,4 +1,5 @@
 use std::io;
+use rand::Rng;
 
 fn main() {
 
@@ -7,8 +8,14 @@ fn main() {
 
 fn practice_input() {
 
-    println!("원하는 숫자를 입력해 주세요.");
+    let secret_number = rand::thread_rng().gen_range(1..=100);
+    //use rand::Rng Rng 트레이트(trait)는 난수 생성기에 구현된 메서드를 정의한다.
+    //SampleRange<T>는 ..=라는 것으로 표현되어 범위를 지정할때에 쓰임.
+    //트레이트(trait)는 Java에서 Interface와 비슷한 존재
+    //rand::thread_rng 함수는 우리가 사용할 난수 생성기를 리턴하고, 생성기의 gen_range 함수를 호출한다.
+    println!("비밀 값은 => {}", secret_number);
 
+    println!("원하는 숫자를 입력해 주세요.");
     let mut guess = String::new();
     // mut 키워드는 값을 변경할수 있게 해줌.(입력이 가능하게)
 
@@ -16,6 +23,8 @@ fn practice_input() {
         .expect("입력 오류!!");
 
     println!("당신이 입력한 값은 {}", guess);
+
+
 
 }
 
