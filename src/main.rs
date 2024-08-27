@@ -1,5 +1,6 @@
 use std::io;
 use rand::Rng;
+use std::cmp::Ordering;
 
 fn main() {
 
@@ -16,15 +17,45 @@ fn practice_input() {
     println!("비밀 값은 => {}", secret_number);
 
     println!("원하는 숫자를 입력해 주세요.");
-    let mut guess = String::new();
-    // mut 키워드는 값을 변경할수 있게 해줌.(입력이 가능하게)
-
-    io::stdin().read_line(&mut guess)// 표기에 유의! &guess가 아닌 &mut guess로 표현해야함.
-        .expect("입력 오류!!");
-
-    println!("당신이 입력한 값은 {}", guess);
 
 
+    // 루프문 실행
+    loop {
+
+        let mut guess = String::new();
+        // mut 키워드는 값을 변경할수 있게 해줌.(입력이 가능하게)
+
+
+
+        io::stdin().read_line(&mut guess)// 표기에 유의! &guess가 아닌 &mut guess로 표현해야함.
+            .expect("입력 오류!!");
+
+        println!("당신이 입력한 값은 {}", guess);
+
+        // guess가 String값이기 때문에 i32으로 이해, u32 로 파싱
+        //let guess: u32 = guess.trim().parse()
+        //    .expect("입력한 값이 올바른 숫자가 아닙니다.");
+
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num, // Ok는 u32로 파싱에 매칭에 성공할 경우 그대로
+            Err(_) => continue, // Err가 나면 컨틴뉴
+        };
+
+        // 값을 비교하는 부분
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("입력한 숫자가 작습니다!"),
+            Ordering::Greater => println!("입력한 숫자가 큽니다!"),
+            Ordering::Equal => {
+                println!("정답!");
+                break;
+            },
+        }
+
+        //let guess: u32 = match guess.trim().parse() {
+        //    Ok(num) => num,
+        //    Err(_) => continue,
+        //};
+    }// break 종료
 
 }
 
