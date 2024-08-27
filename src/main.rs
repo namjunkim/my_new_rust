@@ -4,7 +4,54 @@ use std::cmp::Ordering;
 
 fn main() {
 
-    practice_input();
+    //practice_input();
+    study_variable();
+}
+
+
+fn study_variable() {
+    let x = 5;
+    println!("x : {}", x);
+    //x = 6; // 기본적으로 variable은 immutable
+
+    let mut y = 9;
+    println!("y : {}", y);
+    y = 6; // 기본적으로 variable을 자체를 mut(mutable)로 선언해서 변경 가능
+    println!("y : {}", y);
+
+    const MIN_NUM:u32 = 0; // 상수는 const로 나타낸다.
+
+
+    // Compound Type
+    /// 컴파운드 타입(compound type)은 하나의 타입으로 여러 개의 값을 그룹화한 타입
+    /// 러스트는 기본적으로 튜플(tuple)과 배열(array) 두 가지 컴파운드 타입을 지원
+    ///
+    /// 튜플은 서로 다른 타입의 여러 값을 하나의 컴파운트 타입으로 그룹화하기에 적합한 타입
+    ///
+    let tup = (500, 6.4, 1);
+
+    let (x, y, z) = tup;
+
+    println!("y의 값: {}" ,y);
+
+    let five_hundred = tup.0;
+    println!("five_hundred의 값: {}" ,five_hundred);
+
+    let six_point_four = tup.1;
+    println!("six_point_four의 값: {}" ,six_point_four);
+
+
+    /// 배열(array)은 튜플과 달리 같은 타입으로 이루어 져야하며
+    /// 다른 언어의 배열과는 달리 고정된 길이다. 배열에 저장할 값은 대괄호(square bracket,[]) 안에 쉼표로 구분해서 나열
+    let a = [1, 2, 3, 4, 5];
+
+    //i32 타입으로 5개 원소가 존재한다고 지정
+    let b: [i32; 5] = [1, 2, 3, 4, 5];
+
+    //5개의 원소를 3으로 초기화
+    let b = [3; 5];
+
+
 }
 
 fn practice_input() {
