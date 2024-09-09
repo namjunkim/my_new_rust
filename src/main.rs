@@ -5,7 +5,13 @@ use std::cmp::Ordering;
 fn main() {
 
     //practice_input();
-    study_variable();
+    //study_variable();
+    //practice_function(5);
+    //let result =  hasReturnValue();
+    //println!("{}", result);
+
+    testOfloop();
+    testOfWhile();testOfFor();
 }
 
 
@@ -19,6 +25,7 @@ fn study_variable() {
     y = 6; // 기본적으로 variable을 자체를 mut(mutable)로 선언해서 변경 가능
     println!("y : {}", y);
 
+    //let test:u32 = 4;
     const MIN_NUM:u32 = 0; // 상수는 const로 나타낸다.
 
 
@@ -124,4 +131,73 @@ fn practice_variable() {
     println!("Your name is {}, and my name is {}", your_name, my_name);
     // 이렇게 연속으로 가능합니다.
 
+}
+
+fn practice_function(i: u32) {
+    println!("practice function {}", i);
+
+    let y = 6;  //구문
+
+    //let x = (let y = 6);    //구문 안의 구문 컴파일 에러
+
+    let x = 5;
+    let y = {
+        let x = 3;
+        x + 1; // this is ignored by below expression
+        x + 6// 표현식 마지막에는 세미콜론이 없다
+    };  //표현식
+
+    println!("y의 값: {}", y);
+}
+
+fn hasReturnValue() -> u32 {
+
+    return 6;
+}
+
+fn testOfCondition(x: u32) {
+
+    if x < 10 {
+        println!("This number is under 10 : {}", x);
+    } else if x > 10 && x != 0 {
+        println!("This number is over 10 and not 0 : {}", x);
+    } else {
+        println!("Whatever~")
+    }
+
+}
+
+fn testOfloop() {
+    let mut cnt = 0;
+    loop {
+        cnt = cnt + 1;
+        if cnt == 10 {
+            break cnt;
+        }
+
+    };
+
+    println!("reuslt {}", cnt);
+}
+
+fn testOfWhile() {
+    let mut cnt = 3;
+    while cnt >=0 {
+        println!("{}", cnt);
+        cnt = cnt - 1;
+    };
+
+    println!("Launch the rocket!!");
+}
+
+fn testOfFor() {
+    let a = [10, 20, 30, 40, 50];
+
+    for ele in a.iter() {
+        println!("{}",ele);
+    }
+
+    for ele in a.iter().rev() {
+        println!("{}",ele);
+    }
 }
